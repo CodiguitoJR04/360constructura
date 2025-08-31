@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Constructora 360 - Soluciones integrales en construcción para proyectos residenciales, comerciales, industriales y de infraestructura. Calidad, innovación y sostenibilidad.">
+    <meta name="keywords" content="constructora, construcción, proyectos residenciales, construcción comercial, infraestructura, diseño, planeación, ejecución, supervisión, construcción sostenible">
+    <meta name="author" content="Constructora 360">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Constructora 360 - Soluciones Integrales en Construcción">
+    <meta property="og:description" content="Expertos en proyectos residenciales, comerciales, industriales y de infraestructura con enfoque 360°.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.constructora360.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="canonical" href="https://www.constructora360.com">
+    <title>Constructora 360 - Soluciones Integrales en Construcción</title>
+    <style>
+        :root {
+            --color-primario: #0056b3;
+            --color-secundario: #6c757d;
+            --color-acento: #ff8c00;
+            --color-fondo: #f8f9fa;
+            --color-texto: #333;
+            --fuente-titulos: 'Montserrat', sans-serif;
+            --fuente-texto: 'Raleway', sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-texto);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--fuente-titulos);
+            font-weight: 600;
+        }
+
+        /* Header y Navegación */
+        .nav-custom {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--color-primario) !important;
+        }
+
+        .nav-list .nav-link {
+            color: var(--color-primario) !important;
+            font-weight: 500;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-list .nav-link:hover,
+        .nav-list .nav-link.active {
+            color: var(--color-acento) !important;
+        }
+
+        .nav-list .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--color-acento);
+            transition: width 0.3s ease;
+        }
+
+        .nav-list .nav-link:hover::after,
+        .nav-list .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .btn-custom {
+            background-color: var(--color-acento);
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 12px 30px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #e67e00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sección Nosotros */
+        .section-nosotros {
+            padding: 80px 0;
+            background-color: var(--color-fondo);
+        }
+
+        .custom-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .img-description {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: auto;
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--color-primario);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Sección Servicios */
+        .section-servicios {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .servicios-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .servicios-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--color-primario);
+        }
+
+        .servicio-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .servicio-imagen {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .servicio-overlay {
+            padding: 25px;
+        }
+
+        .servicio-titulo {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--color-primario);
+        }
+
+        /* Sección Proyectos */
+        .section-proyectos {
+            padding: 80px 0;
+            background-color: var(--color-fondo);
+        }
+
+        .proyecto-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .proyecto-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .proyecto-card:hover .proyecto-img {
+            transform: scale(1.05);
+        }
+
+        .proyecto-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            color: white;
+        }
+
+        /* Sección Contacto */
+        .section-contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header h2 {
+            color: var(--color-primario);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            background: var(--color-fondo);
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--color-primario);
+            width: 25px;
+        }
+
+        .contact-form {
+            background: var(--color-fondo);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .form-control {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-primario);
+            box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+        }
+
+        .submit-btn {
+            background: var(--color-acento);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #e67e00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-acento);
+            text-decoration: none;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--color-acento);
+        }
+
+        /* Mejoras de rendimiento y accesibilidad */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 70vh;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .nav-list .nav-link {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content {
+                padding: 20px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .custom-card,
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .btn-custom {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConstructionBusiness",
+      "name": "Constructora 360",
+      "description": "Soluciones integrales en construcción para proyectos residenciales, comerciales, industriales y de infraestructura",
+      "url": "https://www.constructora360.com",
+      "telephone": "+52-555-123-4567",
+      "email": "contacto@constructora360.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Insurgentes 123",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "03100",
+        "addressCountry": "MX"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "areaServed": "México y Latinoamérica",
+      "serviceType": "Construcción residencial, comercial, industrial y de infraestructura"
+    }
+    </script>
+</head>
+<body itemscope itemtype="https://schema.org/ConstructionBusiness">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top nav-custom">
+            <div class="container">
+                <a class="navbar-brand" href="/" itemprop="url">
+                    <span itemprop="name">Constructora 360</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-list ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Soluciones Integrales en Construcción</h1>
+                    <p class="lead">Expertos en proyectos residenciales, comerciales, industriales y de infraestructura con enfoque 360°</p>
+                    <div class="mt-4">
+                        <a href="#contacto" class="btn btn-custom me-3">Solicitar Cotización</a>
+                        <a href="#servicios" class="btn btn-outline-light">Nuestros Servicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Nosotros -->
+        <section id="nosotros" class="section-nosotros">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+                        <div class="custom-card">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-description" alt="Equipo de Constructora 360 - Expertos en construcción" itemprop="image">
+                            <h2 id="nosotros-titulo">Constructora 360 - Soluciones Integrales</h2>
+                            <p id="nosotros-texto">Somos una empresa dedicada a ofrecer soluciones integrales en el sector de la construcción, abarcando proyectos de carácter residencial, comercial, industrial e infraestructura. Nuestro modelo de trabajo "360°" nos permite atender todas las fases del proceso constructivo: diseño, planeación, ejecución, supervisión y entrega final, garantizando resultados de alta calidad y excelencia operativa.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="row text-center">
+                            <div class="col-12 mb-5">
+                                <h2>Nuestro Enfoque</h2>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4 class="mt-3">Equipo Multidisciplinario</h4>
+                                <p>Profesionales y técnicos especializados</p>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h4 class="mt-3">Alta Calidad</h4>
+                                <p>Cumplimiento de estándares internacionales</p>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4 class="mt-3">Sostenibilidad</h4>
+                                <p>Innovación y optimización de recursos</p>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <p>Contamos con un equipo multidisciplinario de profesionales, técnicos especializados y proveedores estratégicos que respaldan cada uno de nuestros proyectos. Gracias a ello, aseguramos el cumplimiento de los más altos estándares de calidad, seguridad y normatividad vigente.</p>
+                                <p>Nuestra filosofía empresarial se basa en la innovación, la sostenibilidad y la optimización de recursos, con el propósito de generar soluciones que aporten valor tanto a nuestros clientes como a la comunidad en general.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="section-servicios">
+            <div class="container">
+                <div class="servicios-header">
+                    <h2>Nuestros Servicios</h2>
+                    <p>Soluciones integrales para cada etapa de su proyecto constructivo</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="servicio-card">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Construcción Residencial - Constructora 360" class="servicio-imagen">
+                            <div class="servicio-overlay">
+                                <h3 class="servicio-titulo">Residencial</h3>
+                                <p>Desarrollamos viviendas y conjuntos habitacionales con los más altos estándares de calidad y diseño.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="servicio-card">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Construcción Comercial - Constructora 360" class="servicio-imagen">
+                            <div class="servicio-overlay">
+                                <h3 class="servicio-titulo">Comercial</h3>
+                                <p>Edificios de oficinas, centros comerciales y espacios comerciales funcionales y modernos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="servicio-card">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Construcción Industrial - Constructora 360" class="servicio-imagen">
+                            <div class="servicio-overlay">
+                                <h3 class="servicio-titulo">Industrial</h3>
+                                <p>Naves industriales, plantas de producción y espacios logísticos optimizados para su operación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="servicio-card">
+                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Infraestructura - Constructora 360" class="servicio-imagen">
+                            <div class="servicio-overlay">
+                                <h3 class="servicio-titulo">Infraestructura</h3>
+                                <p>Proyectos de obra pública, carreteras, puentes y desarrollo urbano con impacto comunitario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section-proyectos">
+            <div class="container">
+                <div class="servicios-header">
+                    <h2>Proyectos Destacados</h2>
+                    <p>Algunos de nuestros trabajos más representativos</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="proyecto-card">
+                            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Proyecto Residencial Las Lomas - Constructora 360" class="proyecto-img">
+                            <div class="proyecto-overlay">
+                                <h3>Residencial Las Lomas</h3>
+                                <p>Conjunto habitacional de 120 viviendas sustentables</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="proyecto-card">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Centro Comercial Galerías - Constructora 360" class="proyecto-img">
+                            <div class="proyecto-overlay">
+                                <h3>Centro Comercial Galerías</h3>
+                                <p>35,000 m² de área rentable con diseño vanguardista</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="proyecto-card">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Parque Industrial Norte - Constructora 360" class="proyecto-img">
+                            <div class="proyecto-overlay">
+                                <h3>Parque Industrial Norte</h3>
+                                <p>15 naves industriales con certificación LEED</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section-contact">
+            <div class="container">
+                <div class="contact-header">
+                    <h2>Contacto</h2>
+                    <p>Estamos listos para hacer realidad su próximo proyecto constructivo</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <div class="contact-info">
+                            <h3>Información de Contacto</h3>
+                            <div class="contact-item" itemprop="telephone">
+                                <i class="fas fa-phone"></i>
+                                <span>+52 55 1234 5678</span>
+                            </div>
+                            <div class="contact-item" itemprop="email">
+                                <i class="fas fa-envelope"></i>
+                                <span>contacto@constructora360.com</span>
+                            </div>
+                            <div class="contact-item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="streetAddress">Av. Insurgentes 123</span>,
+                                <span itemprop="addressLocality">Ciudad de México</span>,
+                                <span itemprop="addressRegion">CDMX</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Lunes a Viernes: 8:00 - 18:00</span>
+                            </div>
+                            
+                            <div class="mt-5">
+                                <h4>Nuestros Valores</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i> Innovación en soluciones constructivas</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Sostenibilidad ambiental</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Optimización de recursos</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Calidad y excelencia operativa</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Compromiso con el cliente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="contact-form">
+                            <h3>Envíanos un mensaje</h3>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Nombre completo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="Teléfono">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Asunto">
+                                    </div>
+                                </div>
+                                
+                                <select class="form-control" required>
+                                    <option value="" disabled selected>Tipo de proyecto</option>
+                                    <option>Residencial</option>
+                                    <option>Comercial</option>
+                                    <option>Industrial</option>
+                                    <option>Infraestructura</option>
+                                    <option>Otro</option>
+                                </select>
+                                
+                                <textarea class="form-control" rows="5" placeholder="Describe tu proyecto o consulta" required></textarea>
+                                
+                                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3>Constructora 360</h3>
+                    <p>Soluciones integrales en construcción con enfoque 360° para proyectos residenciales, comerciales, industriales y de infraestructura.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4>Enlaces Rápidos</h4>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#proyectos">Proyectos</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Constructora 360. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links">
+                        <a href="/aviso-de-privacidad">Aviso de Privacidad</a>
+                        <a href="/terminos-y-condiciones">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para animaciones suaves al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Animación para elementos al hacer scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observar elementos para animar
+            document.querySelectorAll('.servicio-card, .proyecto-card, .custom-card').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
